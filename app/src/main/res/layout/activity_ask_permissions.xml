@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/attention_image"
+        android:src="@drawable/attention"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/text_permissions_note"
+        android:layout_below="@+id/attention_image"
+        android:text="@string/permissions_note"/>
+    <Button
+        android:id="@+id/go_to_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_grant_permissions"
+        android:textColor="#d9e5f3"
+        android:textStyle="bold"
+        android:padding="15dp" />
+</RelativeLayout>

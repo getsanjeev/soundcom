@@ -4,4 +4,11 @@
     <string name="button1">START</string>
     <string name="button2">STOP</string>
     <string name="button3">SEND</string>
+    <string name="permissions_note">The applications needs few Permissions</string>
+    <string name="button_grant_permissions">Grant Permissions</string>
+    <string name="permissions_note_2">Cannot proceed without Permissions, Click on Button to allow permissions or Go to Application Settings</string>
+    <string name="allow_permission">Allow Permissions</string>
+    <string name="need_multiple_permission">Need Multiple Permissions</string>
+    <string name="permission_statement">This app needs to access Sound Recorder and External Storage Services</string>
+
 </resources>
