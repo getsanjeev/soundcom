@@ -3,123 +3,196 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    android:background="#d4d4d4"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#673ab7"
     tools:context="org.scorelab.soundcom.MainActivity">
-    <com.john.waveview.WaveView
-        android:id="@+id/wave_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#d4d4d4"
-        app:above_wave_color="@android:color/white"
-        app:blow_wave_color="@android:color/white"
-        app:progress="58"
-        app:wave_height="large"
-        app:wave_hz="fast"
-        app:wave_length="middle" />
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="S  O  U  N  D  C  O  M"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="#673AB7"
-        android:gravity="center"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
-
-    <LinearLayout
-        android:padding="7dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout2">
-        <Button
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="STOP"
-            android:theme="@style/PrimaryFlatButton"
-            android:id="@+id/imageButtonStop"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
-        <Button
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PLAY"
-            android:theme="@style/PrimaryFlatButton"
-
-            android:id="@+id/imageButtonPlay"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RECORDING TIME"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-light"
-        android:layout_marginTop="42dp"
-        android:textColor="#808080"
-        android:gravity="center"
-
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TAP MIC TO START"
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-light"
-
-        android:textColor="#414141"
-        android:gravity="center"
-
-
-        android:layout_marginBottom="90dp"
-        android:id="@+id/textView2"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
+    <!--img btn-->
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageViewScore"
+        android:src="@mipmap/menu"
+        android:layout_above="@+id/imageButtonStart"
+        />
+    <ImageView
+        android:layout_width="140dp"
         android:layout_height="100dp"
-        android:id="@+id/button1"
-        android:src="@drawable/mic"
-        android:onClick="startMethod"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
-
+        android:id="@+id/imageViewScore"
+        android:src="@mipmap/soundcomlogo2"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="203dp"
+        android:layout_marginLeft="50dp"
+        android:layout_above="@+id/imageButtonStart"
+        />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:background="#fff"
+        android:layout_marginTop="101dp"
+        />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="00:00:00"
-        android:textSize="50sp"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="10:03"
+        android:textColor="#673ab7"
+        android:textSize="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="18dp"
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Meeting with Dave"
+        android:textColor="#673ab7"
+        android:textSize="15dp"
         android:textStyle="bold"
-        android:textColor="#b6b6b6"
-        android:gravity="center"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="24dp"
+        />
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:text="When i met Dave yesterday regarding the business plan"
+        android:textColor="#673ab7"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="24dp"
+        android:id="@+id/textView3" />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:background="#fff"
+        android:layout_marginTop="101dp"
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="10:03"
+        android:textColor="#673ab7"
+        android:textSize="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="18dp"
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Meeting with Dave"
+        android:textColor="#673ab7"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="24dp"
+        />
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:text="When i met Dave yesterday regarding the business plan"
+        android:textColor="#673ab7"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="24dp"
+        />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:background="#fff"
+        android:layout_marginTop="101dp"
+        android:layout_marginLeft="320dp"
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="1:01"
+        android:textColor="#673ab7"
+        android:textSize="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="338dp"
+        />
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Lecture"
+        android:textColor="#673ab7"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="340dp"
+        android:id="@+id/textView4" />
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:text="My tape of the monday chemistry lecture at the university"
+        android:textColor="#673ab7"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="340dp"
+        />
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="160dp"
+        android:text="0:42"
+        android:textSize="100dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="175dp"
+        android:id="@+id/textView2" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="220dp"
+        android:src="@mipmap/play"
+        />
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="My Meeting"
+        android:textSize="30dp"
+        android:layout_marginTop="537dp"
+        android:layout_marginLeft="197dp"
+        android:id="@+id/textView" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="590dp"
+        android:src="@mipmap/beats"
+        />
 
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="none"
+        android:src="@mipmap/mike" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="94dp"
+        android:background="none"
+        android:src="@mipmap/stop" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="390dp"
+        android:background="none"
+        android:src="@mipmap/load" />
 
 </RelativeLayout>
